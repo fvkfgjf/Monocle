@@ -1,6 +1,14 @@
-name: Build
+name: CI Build
 
-on: [push, pull_request]
+on:
+  # 自动触发条件
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  
+  workflow_dispatch:
+
 
 jobs:
   build:
